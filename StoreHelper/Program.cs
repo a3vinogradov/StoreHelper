@@ -9,7 +9,6 @@ if (builder.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
 }
-
 //подключаем поддержку статичных файлов в приложении (css, js и т.д.)
 app.UseStaticFiles();
 
@@ -19,6 +18,6 @@ app.UseRouting();
 // устанавливаем сопоставление маршрутов с контроллерами
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}");
 
 app.Run();
