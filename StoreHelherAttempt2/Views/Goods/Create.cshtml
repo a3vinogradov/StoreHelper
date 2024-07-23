@@ -1,13 +1,13 @@
 ﻿@model StoreHelherAttempt2.Models.Good
 
 @{
-    Layout = "_LayoutMS";
-    ViewData["Title"] = "Create";
+    Layout = "_Layout";
+    ViewData["Title"] = "StoreHelper - Новая вещь";
 }
 
-<h1>Create</h1>
+<h1>Создание</h1>
 
-<h4>Good</h4>
+<h4>Вещь</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -23,6 +23,7 @@
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

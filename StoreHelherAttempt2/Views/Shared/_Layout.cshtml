@@ -1,37 +1,45 @@
 ﻿<!DOCTYPE HTML>
 <!--
-	Editorial by HTML5 UP
-	html5up.net | ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Editorial by HTML5 UP
+    html5up.net | ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 <head>
-	<title>Editorial by HTML5 UP</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="~/css/main.css" />
+     @if (ViewData["Title"] == null)
+     {
+         <title>	Editorial by HTML5 UP </title>
+     }
+     else
+     {
+         <title> @ViewData["Title"] </title>
+     }
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="~/css/main.css" />
 </head>
 <body class="is-preload">
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-		<!-- Main -->
-		<div id="main">
-			<div class="inner">
-				<!-- Header -->
-				<header id="header">
-					<a href="/originalindex.html" class="logo"><strong>Store Helper</strong> by a3v</a>
-				</header>
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <!-- Header -->
+                <header id="header">
+                    <a href="/originalindex.html" class="logo"><strong>Store Helper</strong> by a3v</a>
+                </header>
 
-				@RenderBody()
-			</div>
-		</div>
+                @RenderBody()
+            </div>
+        </div>
 
-		@await Html.PartialAsync("SideBarPartial")
+        @await Html.PartialAsync("SideBarPartial")
 
-	</div>
+    </div>
 
-	@await Html.PartialAsync("ScriptsPartial")
+    @await Html.PartialAsync("ScriptsPartial")
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

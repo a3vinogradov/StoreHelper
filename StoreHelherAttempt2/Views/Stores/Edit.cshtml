@@ -1,13 +1,13 @@
 ﻿@model StoreHelherAttempt2.Models.Store
 
 @{
-    Layout = "_LayoutMS";
-    ViewData["Title"] = "Edit";
+    Layout = "_Layout";
+    ViewData["Title"] = "StoreHelper - Редактирование склада";
 }
 
-<h1>Edit</h1>
+<h1>Редактирование</h1>
 
-<h4>Store</h4>
+<h4>Склад</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -23,7 +23,8 @@
                 <label asp-for="Description" class="control-label"></label>
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
+            </div>            
+            <br />
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
