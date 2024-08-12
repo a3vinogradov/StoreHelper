@@ -6,6 +6,9 @@ namespace StoreHelherAttempt2.Models
 	{
         public DbSet<Store> Stores { get; set; } = null!;
         public DbSet<Good> Goods { get; set; } = null!;
+        public DbSet<Purchase> Purchases { get; set; } = null!;
+        public DbSet<PurchaseItem> PurchaseItems { get; set; } = null!;
+
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
 		: base(options)
 		{
